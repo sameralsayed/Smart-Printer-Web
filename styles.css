@@ -1,0 +1,87 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+
+:root {
+    --primary: #00bfff;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.navbar-brand span {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.bg-gradient {
+    background: linear-gradient(135deg, #0d1117, #1a2333);
+}
+
+.card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 25px -5px rgb(0 191 255 / 0.2) !important;
+}
+
+#drop-zone {
+    transition: all 0.3s ease;
+}
+
+#drop-zone.dragover {
+    background: rgba(0, 191, 255, 0.1);
+    border-color: #00bfff !important;
+}
+
+.preview-item {
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.preview-item:hover {
+    transform: scale(1.05);
+}
+
+.preview-item .remove-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 28px;
+    height: 28px;
+    background: #ff4444;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.template-card {
+    height: 220px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.template-card:hover img {
+    transform: scale(1.1);
+}
+
+.modal-content {
+    border-radius: 20px;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.2rem;
+    }
+    .fixed-bottom {
+        position: static !important;
+        margin: 20px 0;
+    }
+}
